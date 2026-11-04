@@ -1,0 +1,113 @@
+.package {
+  --card-accent: var(--muted);
+  --card-soft: var(--muted-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 18px 18px 20px;
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--card-accent);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: 0 2px 8px rgb(31 36 48 / 6%);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.package:hover {
+  box-shadow: 0 8px 22px rgb(31 36 48 / 10%);
+  transform: translateY(-2px);
+}
+
+/* צבע שונה לכל מארז — לפי המיקום ברשימה */
+.package--c1 { --card-accent: var(--accent); --card-soft: var(--accent-soft); }
+.package--c2 { --card-accent: var(--teal); --card-soft: var(--teal-soft); }
+.package--c3 { --card-accent: var(--amber); --card-soft: var(--amber-soft); }
+.package--c4 { --card-accent: var(--success); --card-soft: var(--success-soft); }
+
+.package--building {
+  --card-accent: var(--accent);
+}
+
+.package__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.package__title {
+  margin: 0 0 2px;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.package__target {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.package__badge {
+  flex-shrink: 0;
+  padding: 3px 12px;
+  border-radius: 999px;
+  background: var(--card-soft);
+  color: var(--card-accent);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.package__empty {
+  margin: 0;
+  padding: 14px;
+  border-radius: 10px;
+  background: var(--surface-alt);
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.package__items {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.package__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 10px;
+  border-radius: 9px;
+  background: var(--surface-alt);
+  border-inline-start: 3px solid var(--card-accent);
+}
+
+.package__item-name {
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+
+.package__item-price {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.package__total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: var(--card-soft);
+  font-size: 0.95rem;
+}
+
+.package__total strong {
+  font-size: 1.25rem;
+  color: var(--card-accent);
+  font-variant-numeric: tabular-nums;
+}

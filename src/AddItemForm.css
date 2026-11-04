@@ -1,0 +1,50 @@
+.add-item-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  padding-top: 4px;
+}
+
+.add-item-form input {
+  flex: 1 1 100px;
+  min-width: 0;
+  padding: 8px 11px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  font-size: 0.9rem;
+  background: var(--surface);
+  color: var(--text);
+  transition: border-color 0.15s ease;
+}
+
+.add-item-form input::placeholder {
+  color: var(--muted);
+}
+
+.add-item-form input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.add-item-form button {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 9px;
+  background-color: var(--surface-alt);
+  color: var(--card-accent, var(--accent));
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.add-item-form button:hover {
+  background-color: var(--card-soft, var(--accent-soft));
+}
+
+.add-item-form button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}

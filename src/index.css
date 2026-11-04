@@ -1,0 +1,50 @@
+:root {
+  --bg: #f4f6fb;
+  --surface: #fff;
+  --surface-alt: #f5f7fc;
+  --border: #e1e5f0;
+  --text: #1f2430;
+  --muted: #6b7385;
+  --muted-soft: #eceff7;
+
+  --accent: #4f6ef7;
+  --accent-dark: #3b56d6;
+  --accent-soft: #e8ecff;
+
+  --teal: #14a89a;
+  --teal-dark: #0f8a7f;
+  --teal-soft: #e0f6f3;
+
+  --amber: #e8a13a;
+  --amber-soft: #fdf1de;
+
+  --success: #2e9e5b;
+  --success-dark: #247c47;
+  --success-soft: #e3f5ea;
+
+  --danger: #d1483c;
+  --danger-soft: #fbe9e7;
+
+  font-family: 'Segoe UI', 'Arial', system-ui, sans-serif;
+  line-height: 1.5;
+  color: var(--text);
+  background-color: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+input,
+button {
+  font-family: inherit;
+}
